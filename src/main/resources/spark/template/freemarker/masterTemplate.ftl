@@ -28,13 +28,17 @@
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <#if user??>
-                    <li><a href="/application">My Application</a></li>
+                    <li><a href="/public">Jobs Timeline</a></li>
                     <li><a href="/message">My Messages</a></li>
-                    <li><a href="/logout">Sign Out [${user.username}]</a></li>
-                    <li><a href="/application">Jobs Timeline</a></li>
+                    <li><a href="/application">My Application</a></li>
+                    <li><a href="/logout">${user.username}
+                        <select><option>Sign Out</option></select>
+                    </a></li>
                 <#else>
-                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/public">Jobs Timeline</a></li>
                     <li><a href="/login">Sign In</a></li>
+                    <li><a href="/register">Sign Up</a></li>
+
                 </#if>
             </ul>
         </div>
